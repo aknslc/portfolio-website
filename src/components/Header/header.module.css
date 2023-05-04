@@ -1,0 +1,15 @@
+@import url('../../index.css');
+
+#header{
+    height: 70px;
+    border-bottom: 1px solid var(--light-gray-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#header #logo{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: var(--primary-font);
+}
