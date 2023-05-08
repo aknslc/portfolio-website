@@ -4,7 +4,7 @@ import styles from './projects.module.css'
 
 const Projects = () => {
   return (
-    <section className={styles.projects}>
+    <section id="projects" className='my-5'>
       <div className="container">
         <div className="row">
           <div className="col-lg-3">

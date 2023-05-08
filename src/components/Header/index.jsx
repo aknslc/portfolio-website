@@ -1,12 +1,25 @@
 import React from 'react'
-import  styles  from './header.module.css'
-
+import styles from './header.module.css'
+import { navLinks } from '../../constants'
 const Header = () => {
   return (
     <header id={styles.header}>
-      <div id={styles.logo}>
-          #aknslc
+
+      <div className="container">
+        <nav>
+          <div id={styles.logo}>
+            #aknslc
+          </div>
+          <ul className={styles.menu}>
+            {navLinks.map(item => (
+              <li className={styles.menuItem}>
+                <a href={`#${item.id}`}>{item.title}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </div>
+
     </header>
   )
 }

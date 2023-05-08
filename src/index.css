@@ -1,10 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Comme:wght@300;400;600;700&display=swap');
 :root {
-    --primary-color: #e96c6c;
+    --primary-color: #E36B5D;
+	--header-color: #2D2E32;
 	--light-green-color: #08FDD8;
 	--light-gray-color: #f1f1f1;
+	--paragraph-color: #767676;
 	--primary-font : 'Comme', sans-serif;
 
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -38,6 +45,9 @@ body {
 }
 ol, ul {
 	list-style: none;
+	margin: 0 !important;
+	padding: 0 !important;
+
 }
 blockquote, q {
 	quotes: none;

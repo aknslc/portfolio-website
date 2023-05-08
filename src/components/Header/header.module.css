@@ -5,11 +5,35 @@
     border-bottom: 1px solid var(--light-gray-color);
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 #header #logo{
     font-size: 20px;
     font-weight: 600;
     font-family: var(--primary-font);
+}
+
+#header nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+#header nav .menu{
+    display: flex;
+    align-items: center;
+
+}
+
+#header nav .menu .menuItem{
+    margin-left: 25px;
+    border: 1px solid var(--light-gray-color);
+    padding: 10px;
+    border-radius: 10px;
+}
+#header nav .menu .menuItem a{
+    text-decoration: none;
+    color: var(--header-color);
+    font-weight: 600;
 }
