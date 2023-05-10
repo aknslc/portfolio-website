@@ -4,8 +4,14 @@ import styles from './projects.module.css'
 
 const Projects = () => {
   return (
-    <section id="projects" className='my-5'>
+    <section id="projects" className={`${styles.projects}`}>
       <div className="container">
+        <h4>
+          Portfolio
+        </h4>
+        <h3>
+          Each project is a unique piece of development 🧩
+        </h3>
         <div className="row">
           <div className="col-lg-3">
             <ProjectCard />

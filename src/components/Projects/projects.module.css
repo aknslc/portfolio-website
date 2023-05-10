@@ -1,0 +1,19 @@
+.projects{
+    margin: 100px 0;
+    padding: 50px 0;
+    background-color: #F9F9F9;
+}
+
+.projects h4{
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 20px 0;
+    text-transform: uppercase;
+}
+.projects h3{
+    color: var(--header-color);
+    font-size: 21px;
+    margin-bottom: 5rem;
+    font-weight: 700;
+}
