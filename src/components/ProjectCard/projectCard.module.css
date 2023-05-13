@@ -1,48 +1,93 @@
-.projectCard{
-    border: 1px solid var(--light-gray-color);
-    /* box-shadow: 1px 1px 2px var(--light-gray-color); */
+.projectCard {
+    box-shadow: 0 0 10px rgba(0, 0, 0, .09);
+    cursor: pointer;
+   
+    position: relative;
 
 }
 
-.cardContent{
+.projectCard::after {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: -2px;
+    transform: translateY(-50%);
+    height: 0%;
+    z-index: 1;
+    width: calc(100% + 4px);
+    opacity: .7;
+    box-shadow: 0 -10px 0 0 var(--primary-color), 0 10px 0 0 var(--light-green-color);
+    content: "";
+    transition: height .4s ease-in-out;
+
+}
+.projectCard:hover::after {
+    height: 110%;
+}
+
+.cardContent {
     padding: 10px;
 }
 
-.projectCard img{
+.projectCard img {
     width: 100%;
 }
 
-.cardContent .tags{
+.cardContent .tags {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     margin: 10px 0;
 
 }
-.cardContent .tags .tag:nth-child(2){
+
+.cardContent .tags .tag:nth-child(2) {
     color: var(--primary-color);
 
 }
-.cardContent .tags .tag:nth-child(1){
+
+.cardContent .tags .tag:nth-child(1) {
     color: var(--light-green-color);
 
 }
-.cardContent .tags .tag:nth-child(3){
+
+.cardContent .tags .tag:nth-child(3) {
     color: var(--light-green-color);
 
 }
 
-.cardContent .tags .tag{
+.cardContent .tags .tag {
     margin-right: 10px;
-    font-weight: 300;
+    font-weight: 700;
     font-size: 14px;
     letter-spacing: 1px;
 }
 
-.cardContent .projectTitle{
-    margin: 25px 0;
-    font-size: 20px;
+.cardContent .projectTitle {
+    margin: 15px 0;
+    font-size: 16px;
     letter-spacing: 1px;
+    font-weight: 600;
     color: rgb(64, 64, 64);
-    
 }
+
+.viewProject{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+}
+
+.projectCard:hover .cardContent {
+    opacity: .1;
+    transition: all .5s;
+}
+.projectCard:hover img {
+    opacity: .1;
+    transition: all .5s;
+}
+.projectCard:hover .viewProject {
+    visibility: visible;
+}
+

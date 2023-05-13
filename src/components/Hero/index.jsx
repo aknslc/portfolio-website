@@ -7,7 +7,7 @@ import { skills } from '../../constants'
 const Hero = () => {
   return (
     <section id={styles.hero}>
-      <div className='container'>
+      <div className='custom-container'>
         <div className="row d-flex align-items-center">
           <div className="col-lg-6">
             <div className={styles.heroLeftContent}>

@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header id={styles.header}>
 
-      <div className="container">
+      <div className="custom-container">
         <nav>
           <div id={styles.logo}>
             #aknslc
