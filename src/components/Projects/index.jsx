@@ -1,6 +1,7 @@
 
 import ProjectCard from '../ProjectCard'
 import styles from './projects.module.css'
+import { projects } from '../../constants'
 
 const Projects = () => {
   return (
@@ -13,20 +14,16 @@ const Projects = () => {
           Each project is a unique piece of development 🧩
         </h3>
         <div className="row">
-          <div className="col-lg-4">
-            <ProjectCard />
-          </div>
-          <div className="col-lg-4">
-            <ProjectCard />
-          </div>
-          <div className="col-lg-4">
-            <ProjectCard />
-          </div>
+          {projects.map(project => (
+            <div key={project.id} className="col-lg-4">
+              <ProjectCard project={project} />
+            </div>
+          ))}
         </div>
       </div>
 
       <div className={styles.line}>
-        
+
       </div>
       <div className={styles.box}>
 

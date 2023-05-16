@@ -1,5 +1,6 @@
 import Modal from 'react-modal'
-import { useState } from 'react';
+import { AiOutlineClose } from 'react-icons/ai'
+import styles from './modal.module.css'
 
 const customStyles = {
     content: {
@@ -7,6 +8,7 @@ const customStyles = {
         left: '50%',
         right: 'auto',
         bottom: 'auto',
+        width: "70%",
         marginRight: '-50%',
         transform: 'translate(-50%, -50%)',
     },
@@ -15,13 +17,7 @@ const customStyles = {
 // Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
 Modal.setAppElement('#root');
 
-const ProjectModal = () => {
-
-    const [modalIsOpen, setIsOpen] = useState(false);
-
-    function openModal() {
-        setIsOpen(true);
-    }
+const ProjectModal = ({ modalIsOpen, setIsOpen, project }) => {
 
     function closeModal() {
         setIsOpen(false);
@@ -29,16 +25,39 @@ const ProjectModal = () => {
 
     return (
         <div>
-            <button onClick={openModal}>Tikla</button>
             <Modal
                 isOpen={modalIsOpen}
                 onRequestClose={closeModal}
                 style={customStyles}
-                contentLabel="Example Modal"
-            >
-                <button onClick={closeModal}>close</button>
-                <div>I am a modal</div>
                 
+
+            >
+                <AiOutlineClose
+                    size={25}
+                    style={{ position: "absolute", cursor: "pointer", top: "15px", right: "15px" }}
+                    onClick={closeModal}
+                />
+
+                <div className={styles.modalContent}>
+                    <div className="row d-flex align-items-start">
+                        <div className="col-lg-6">
+                            <img src={project.img} alt="" />
+                        </div>
+                        <div className="col-lg-6">
+                            <h4>{project.title}</h4>
+                            <p>{project.description}</p>
+                            <div>
+                                <a href="!#">Github</a>
+                            </div>
+                            <div>
+                                <a href="!#">Live</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
             </Modal>
         </div>
     )

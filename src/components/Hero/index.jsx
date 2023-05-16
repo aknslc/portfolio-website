@@ -21,7 +21,7 @@ const Hero = () => {
               <div className={styles.techStack}>
                 <ul className='row'>
                   {skills.map(item => (
-                    <li className='col-lg-2 col-md-3 col-sm-6'>
+                    <li key={item.title} className='col-lg-2 col-md-3 col-sm-6'>
                       <img src={item.img} alt={item.title} />
                     </li>
                   ))}

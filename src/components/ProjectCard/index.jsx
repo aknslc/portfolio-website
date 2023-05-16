@@ -1,32 +1,41 @@
 import styles from './projectCard.module.css'
-import projectImg from '../../assets/project.png'
 import { AiOutlineEye } from 'react-icons/ai'
 import ProjectModal from '../Modal/Modal'
+import { useState } from 'react'
 
-const ProjectCard = () => {
+const ProjectCard = ({ project }) => {
+  const [modalIsOpen, setIsOpen] = useState(false);
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+
 
   return (
-    <div className={styles.projectCard}>
-      <img src={projectImg} alt="project" />
-      <div className={styles.cardContent}>
-        <div className={styles.tags}>
-          <div className={styles.tag}>
-            #react
+    <>
+      {!modalIsOpen &&
+        <div className={styles.projectCard}>
+          <img src={project.img} alt="project" />
+          <div className={styles.cardContent}>
+            <div className={styles.tags}>
+              {project.tags.map((item, index) => (
+                <div key={index} className={styles.tag}>
+                  {`#${item}`}
+                </div>
+              ))}
+            </div>
+            <h6 className={styles.projectTitle}>{project.title}</h6>
           </div>
-          <div className={styles.tag}>
-            #javascript
+          <div className={styles.viewProject}>
+            <AiOutlineEye onClick={openModal} size={40} color='#E36B5D' />
           </div>
-          <div className={styles.tag}>
-            #bootstrap
-          </div>
+
+          
         </div>
-        <h6 className={styles.projectTitle}>E-commerce</h6>
-      </div>
-      <div className={styles.viewProject}>
-        <AiOutlineEye size={40} color='#E36B5D' />
-      </div>
-      <ProjectModal />
-    </div>
+      }
+      <ProjectModal modalIsOpen={modalIsOpen} setIsOpen={setIsOpen} project={project} />
+    </>
   )
 }
 

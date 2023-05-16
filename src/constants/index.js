@@ -47,3 +47,27 @@ export const skills = [
         img: scss
     },
 ]
+
+export const projects = [
+    {
+        id: 1,
+        title: "E-commerce",
+        description: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex maiores fugit, dolorum dolor, impedit iste sit accusantium voluptate, ipsa ea blanditiis cupiditate aspernatur! Accusamus magni fugit expedita possimus eos? Iure!",
+        img: html,
+        tags: ["javascript", "react", "redux"]
+    },
+    {
+        id: 2,
+        title: "Company X",
+        description: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex maiores fugit, dolorum dolor, impedit iste sit accusantium voluptate, ipsa ea blanditiis cupiditate aspernatur! Accusamus magni fugit expedita possimus eos? Iure!",
+        img: css3,
+        tags: ["angular", "jquery", "material ui"]
+    },
+    {
+        id: 3,
+        title: "Phonex",
+        description: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex maiores fugit, dolorum dolor, impedit iste sit accusantium voluptate, ipsa ea blanditiis cupiditate aspernatur! Accusamus magni fugit expedita possimus eos? Iure!",
+        img: js,
+        tags: ["vue", "react", "tailwind css"]
+    }
+]
