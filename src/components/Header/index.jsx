@@ -13,7 +13,7 @@ const Header = () => {
           <ul className={styles.menu}>
             {navLinks.map(item => (
               <li key={item.id} className={styles.menuItem}>
-                <a href={`#${item.id}`}>{item.title}</a>
+                <a href={item.id !=='home' ? `/#${item.id}` : `/`}>{item.title}</a>
               </li>
             ))}
           </ul>

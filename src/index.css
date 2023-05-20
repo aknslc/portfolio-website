@@ -124,6 +124,10 @@ body {
 	line-height: 1;
 	font-family: var(--primary-font) !important;
 }
+a{
+	text-decoration: none !important;
+
+}
 
 ol,
 ul {

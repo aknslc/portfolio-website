@@ -2,6 +2,7 @@ import Modal from 'react-modal'
 import { AiOutlineClose } from 'react-icons/ai'
 import styles from './modal.module.css'
 
+
 const customStyles = {
     content: {
         top: '50%',
@@ -18,18 +19,16 @@ const customStyles = {
 Modal.setAppElement('#root');
 
 const ProjectModal = ({ modalIsOpen, setIsOpen, project }) => {
-
     function closeModal() {
         setIsOpen(false);
     }
-
     return (
         <div>
             <Modal
                 isOpen={modalIsOpen}
                 onRequestClose={closeModal}
                 style={customStyles}
-                
+
 
             >
                 <AiOutlineClose
@@ -39,18 +38,20 @@ const ProjectModal = ({ modalIsOpen, setIsOpen, project }) => {
                 />
 
                 <div className={styles.modalContent}>
-                    <div className="row d-flex align-items-start">
-                        <div className="col-lg-6">
-                            <img src={project.img} alt="" />
+                    <div className="row d-flex align-items-center">
+                        <div
+                            className="col-lg-6"
+
+                        >
+                            <img src={project.img} alt="project" />
                         </div>
                         <div className="col-lg-6">
                             <h4>{project.title}</h4>
                             <p>{project.description}</p>
-                            <div>
-                                <a href="!#">Github</a>
-                            </div>
-                            <div>
-                                <a href="!#">Live</a>
+
+                            <div className={styles.links}>
+                                <span>Github</span>
+                                <span>Live</span>
                             </div>
                         </div>
                     </div>

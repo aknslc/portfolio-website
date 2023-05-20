@@ -28,7 +28,7 @@ const ProjectCard = ({ project }) => {
             <h6 className={styles.projectTitle}>{project.title}</h6>
           </div>
           <div className={styles.viewProject}>
-            <AiOutlineEye onClick={openModal} size={40} color='#E36B5D' />
+            <AiOutlineEye onClick={openModal} size={50} color='#E36B5D' />
           </div>
 
           

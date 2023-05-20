@@ -2,6 +2,8 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, .09);
     cursor: pointer;
     position: relative;
+    padding: 5px;
+    border-radius: 3px;
 
 }
 
@@ -20,6 +22,7 @@
     transition: height .4s ease-in-out;
 
 }
+
 .projectCard:hover::after {
     height: 110%;
 }
@@ -30,12 +33,17 @@
 
 .projectCard img {
     width: 100%;
+    height: 150px;
+    border-radius: 3px;
+
+
 }
 
 .cardContent .tags {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    flex-wrap: wrap;
     margin: 10px 0;
 
 }
@@ -60,17 +68,20 @@
     font-weight: 700;
     font-size: 14px;
     letter-spacing: 1px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+    padding: 0 5px;
+
 }
 
 .cardContent .projectTitle {
-    margin: 15px 0;
+    margin-top: 30px;
     font-size: 16px;
-    letter-spacing: 1px;
-    font-weight: 600;
-    color: rgb(64, 64, 64);
+    font-weight: 700;
+    color: #4c4c4c;
+    text-transform: uppercase;
 }
 
-.viewProject{
+.viewProject {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -83,11 +94,12 @@
     opacity: .1;
     transition: all .1s;
 }
+
 .projectCard:hover img {
     opacity: .1;
     transition: all .1s;
 }
+
 .projectCard:hover .viewProject {
     visibility: visible;
 }
-

@@ -1,3 +1,49 @@
-.modalContent img{
+.modalContent img {
     width: 100%;
+    height: auto;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.modalContent h4 {
+    font-size: 21px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--header-color);
+    margin: 15px 0;
+    text-align: center;
+}
+
+.modalContent p {
+    color: #767676;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    text-transform: none;
+    line-height: 1.4;
+    margin-top: 20px;
+    margin-bottom: 35px;
+    padding: 0 30px;
+}
+
+.modalContent .links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.modalContent .links span {
+    padding: 5px 10px;
+    margin-right: 10px;
+    transition: all .3s;
+    background-color: var(--primary-color);
+    color: #fff;
+
+}
+
+.modalContent .links span:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    cursor: pointer;
 }
